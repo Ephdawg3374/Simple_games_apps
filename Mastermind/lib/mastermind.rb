@@ -100,6 +100,15 @@ class Game
   end
 
   def play
+    puts "There are six different peg colors:"
+    puts "  - Red"
+    puts "  - Green"
+    puts "  - Blue"
+    puts "  - Yellow"
+    puts "  - Orange"
+    puts "  - Purple"
+    puts "Each guess must be a combination of 4 colors and using the colors' first letter (ie: R = red)"
+
   	while @number_of_turns <= 10
   		puts "Number of turns remaining = #{10 - @number_of_turns}"
   		puts "Please guess a combination (ex: RGYP, not case sensitive)"
@@ -115,6 +124,8 @@ class Game
 
   		@number_of_turns += 1
   	end
+
+    puts "No more turns left! You lose!"
   end
 
   def winner
